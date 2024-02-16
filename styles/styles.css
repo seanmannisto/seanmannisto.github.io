@@ -1,0 +1,378 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.8;
+    padding: 20px;
+    background-image: url('../assets/images/bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    /* ... other styles ... */
+
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);  
+    pointer-events: none;  
+    z-index: -1;
+}
+
+
+/*
+button {
+    background-color: #a07BFF;
+    color: #fff;
+    padding: 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+*/
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.7);  /* Adjust the 0.1 to change background opacity */
+    border-radius: 8px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    font-size: 1.3em; /* Adjust this value to your preference */
+    color: #ffffff;
+    text-decoration: none;
+    padding: .5vw 2vw;
+    display: inline-block;
+    margin-right: 2vw;
+}
+
+
+
+nav a:hover, #contact button:hover {
+    background-color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+a, #contact button {
+    color: #007BFF;
+}
+
+a:hover, #contact button:hover {
+    color: #0056b3;
+}
+
+a, button {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Section Styles */
+section {
+    margin-bottom: 50px;
+    margin: 2vw;
+    padding: 2vw;
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section h2{font-size:20px;}
+
+/* About Section */
+#about .profile-photo {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+#portfolio .project {
+    margin:2vw;
+    margin-bottom: 30px;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+}
+
+
+
+#skills li {
+    background-color: #333;
+    margin:0 2vw;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.skills-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap to your preference */
+    justify-content: space-around;
+}
+
+.skill-category {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust this value to control the flex items’ width */
+    box-sizing: border-box;
+    text-align: center; /* Centers the text */
+}
+
+
+
+
+
+
+
+/* Contact Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#contact button {
+    background-color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+#contact .social-links a {
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+
+#nav-toggle {
+    display: none;  /* hide by default */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+nav a:hover {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+
+.project {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+}
+
+
+.tableau-embed {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#education .education-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.1);  /* Adjust the 0.1 to change background opacity */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 50px;
+}
+
+#education .text {
+    flex: 1;
+    margin-right: 20px; /* Adds some spacing between text and logo */
+}
+
+#education .logo {
+    flex: 1;
+}
+
+#education .logo img {
+    max-width: 20vw; /* Adjust the width as needed */
+    border-radius: 1vw; /* Optional: for rounded corners */
+}
+
+#education h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#education p {
+    margin-bottom: 10px;
+}
+
+
+
+
+#certifications {
+    padding: 20px 0;
+}
+
+.certification {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 50px;
+}
+
+.certification-text {
+    flex: 1;
+    margin: 50px;
+    
+}
+
+.certification-badge {
+    /* Adjust the width of the badge column if necessary */
+    width: 150px;
+}
+
+
+.certification h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.certification p {
+    margin-bottom: 10px;
+}
+
+.certification a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+
+
+@media (max-width: 480px) {
+    .skill-category {
+        flex: 1 1 100%; /* One item per row on very small screens */
+    }
+}
+
+
+#nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-menu li {
+    margin: 0;
+}
+
+
+/* Show toggle button and hide menu in smaller viewports */
+@media (max-width: 700px) {
+        #about .profile-photo {
+        margin: auto;}
+    
+    .skill-category {
+        flex: 1 1 calc(50% - 20px);} /* Two items per row on smaller screens */
+    
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;  /* Hide by default */
+        flex-direction: column;
+    }
+
+    #nav-menu.visible {
+        display: flex;
+    }
+}
+
+
+
